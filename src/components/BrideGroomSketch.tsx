@@ -4,7 +4,7 @@ import { Sparkles } from "lucide-react";
 
 export default function BrideGroomCard() {
   // Replace this placeholder link with your actual hosted image URL/path
-  const hostedImageUrl = "public/images/wed1.png";
+  const hostedImageUrl = "images/wed1.png";
 
   return (
     <div className="w-full max-w-2xl mx-auto py-8 px-4 select-none">
