@@ -25,7 +25,7 @@ export default function PhotoGallery() {
   const photos: PhotoItem[] = [
     {
       id: 0,
-      url: "assets/images/WhatsApp Image 2026-06-12 at 7.55.53 PM.jpeg",
+      url: "public/images/WhatsApp Image 2026-06-12 at 7.55.53 PM.jpeg",
       fallbackUrl:
         "https://images.unsplash.com/photo-1583939003579-730e3918a45a?auto=format&fit=crop&q=80&w=1200",
       title: "",
@@ -35,7 +35,7 @@ export default function PhotoGallery() {
     },
     {
       id: 1,
-      url: "assets/images/WhatsApp Image 2026-06-12 at 7.57.01 PM.jpeg",
+      url: "public/images/WhatsApp Image 2026-06-12 at 7.57.01 PM.jpeg",
       fallbackUrl:
         "https://images.unsplash.com/photo-1621616875500-de9944358366?auto=format&fit=crop&q=80&w=1200",
       title: "Better Together",
@@ -45,7 +45,7 @@ export default function PhotoGallery() {
     },
     {
       id: 2,
-      url: "assets/images/WhatsApp Image 2026-06-12 at 7.57.13 PM.jpeg",
+      url: "public/images/WhatsApp Image 2026-06-12 at 7.57.13 PM.jpeg",
       fallbackUrl:
         "https://images.unsplash.com/photo-1607190074257-dd4b7af0309f?auto=format&fit=crop&q=80&w=1200",
       title: "Floral Grandeur",
