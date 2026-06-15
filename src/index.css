@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-hand: "Great Vibes", cursive;
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+  
+  --color-gold-50: #FCFAF6;
+  --color-gold-100: #F6F1E5;
+  --color-gold-200: #E6DBC0;
+  --color-gold-300: #D4C196;
+  --color-gold-500: #B89C5A;
+  --color-gold-600: #9B7E3F;
+  --color-gold-700: #7E6128;
+  --color-cream-light: #FDFCF7;
+  --color-cream-base: #FAF7F2;
+  --color-cream-dark: #F2EDE2;
+}
+
+@layer utilities {
+  /* Premium paper texture background */
+  .bg-paper-texture {
+    background-color: #FAF7F2;
+    background-image: radial-gradient(rgba(184, 156, 90, 0.05) 1px, transparent 0),
+                      radial-gradient(rgba(184, 156, 90, 0.03) 1px, transparent 0);
+    background-size: 24px 24px;
+    background-position: 0 0, 12px 12px;
+  }
+}
+
+/* Custom continuous animations for elegant interactivity */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(2deg);
+  }
+}
+
+@keyframes sway {
+  0%, 100% {
+    transform: rotate(-3deg);
+  }
+  50% {
+    transform: rotate(3deg);
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+@keyframes pulse-soft {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.02);
+  }
+}
+
+/* Rose falling animation */
+@keyframes petal-fall {
+  0% {
+    transform: translateY(-10%) rotate(0deg) translateX(0);
+    opacity: 0;
+  }
+  10% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  100% {
+    transform: translateY(11vh) rotate(360deg) translateX(100px);
+    opacity: 0;
+  }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+.animate-sway-slow {
+  animation: sway 6s ease-in-out infinite;
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 3s ease-in-out infinite;
+}
+
+.text-shimmer {
+  background: linear-gradient(to right, #9B7E3F 20%, #E6DBC0 40%, #B89C5A 60%, #9B7E3F 80%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 4s linear infinite;
+}
+
+/* Hide scrollbar but keep functional */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}

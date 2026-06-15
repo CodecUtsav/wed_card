@@ -1,0 +1,6 @@
+{
+  "name": "Wedding Invitation",
+  "description": "Interactive wedding invitation website for Mayank and Ritika on 9 July 2026, featuring events calendar, active countdown timer, interactive RSVP form, and guest blessing board.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
