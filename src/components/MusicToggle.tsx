@@ -6,7 +6,7 @@ export default function MusicToggle() {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   // A beautiful traditional Indian Sitar and Flute background melody link (royalty-free)
-  const musicUrl = "assets/.aistudio/audio/wedd.mp3";
+  const musicUrl = "assets/audio/wedd.mp3";
 
   useEffect(() => {
     const audio = new Audio(musicUrl);
