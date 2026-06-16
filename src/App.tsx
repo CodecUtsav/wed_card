@@ -134,48 +134,51 @@ export default function App() {
           <TimelineSection />
         </div>
 
-        {/* SECTION 6 - FINAL EMOTIVE THANK YOU (Page 8 Thank You block) */}
-        <footer className="relative py-16 px-4 bg-gradient-to-b from-cream-base to-cream-dark text-center select-none overflow-hidden border-t border-amber-200/20">
-          {/* Mirroring the ornamental curtain look */}
-          <div className="absolute top-0 inset-x-0 h-4 flex justify-between pointer-events-none opacity-30">
-            {Array.from({ length: 16 }).map((_, i) => (
+        {/* ================= IMPROVED FOOTER SECTION ================= */}
+        <footer className="relative py-20 px-4 bg-gradient-to-b from-transparent via-stone-50/50 to-amber-50/30 text-center select-none overflow-hidden border-t border-amber-200/30">
+          {/* Refined Modular Hanging Festoon/Curtain Overlay */}
+          <div className="absolute top-0 inset-x-0 h-6 flex justify-between pointer-events-none opacity-[0.15]">
+            {Array.from({ length: 24 }).map((_, i) => (
               <div
                 key={i}
-                className="w-12 h-12 rounded-b-full border-b border-amber-600 bg-transparent shrink-0"
+                className="w-16 h-12 rounded-b-full border-b-2 border-dashed border-amber-700 bg-transparent shrink-0"
               />
             ))}
           </div>
 
-          <div className="max-w-xl mx-auto space-y-6 relative z-10 pt-4">
-            <span className="text-[10px] text-amber-700 tracking-[0.3em] font-bold uppercase block">
+          <div className="max-w-xl mx-auto space-y-6 relative z-10 pt-2">
+            <span className="text-[10px] sm:text-xs text-amber-700 tracking-[0.4em] font-bold uppercase block font-sans">
               Dhanyavaad
             </span>
-            <h3 className="font-serif text-3xl font-extrabold text-red-800">
+
+            <h3 className="font-serif text-3xl sm:text-4xl font-black bg-gradient-to-b from-red-700 to-red-900 bg-clip-text text-transparent">
               Thank You
             </h3>
 
-            <div className="w-16 h-px bg-amber-500/40 mx-auto" />
+            <div className="w-16 h-[1px] bg-gradient-to-r from-transparent via-amber-400 to-transparent mx-auto" />
 
-            <p className="font-serif text-base text-stone-700 leading-relaxed italic max-w-md mx-auto">
+            <p className="font-serif text-base sm:text-lg text-stone-600 leading-relaxed italic max-w-md mx-auto">
               "We are delighted to share our special day with you. Your presence
               and blessings will be the greatest gift to us."
             </p>
 
-            <div className="pt-2">
-              <span className="font-hand text-5xl text-red-850 block leading-none">
+            <div className="pt-4 space-y-2">
+              <span className="font-hand text-4xl sm:text-5xl text-red-800 block leading-none filter drop-shadow-sm">
                 Mayank &amp; Ritika
               </span>
-              <span className="text-[10px] uppercase tracking-[0.2em] font-extrabold text-stone-400 block mt-2">
+              <span className="text-[10px] sm:text-xs uppercase tracking-[0.25em] font-extrabold text-amber-800/60 block pt-1 font-sans">
                 #MayankGetsRiti
               </span>
             </div>
 
-            <div className="pt-8 text-[10px] font-mono text-stone-500 flex flex-col items-center justify-center gap-1.5">
-              <div className="flex items-center gap-1">
-                <Heart className="w-3.5 h-3.5 fill-red-800 text-red-800" />
-                <span>Kota, Rajasthan 2026</span>
+            {/* Institutional Metadata Signoff */}
+            <div className="pt-10 text-[10px] font-mono text-stone-400 flex flex-col items-center justify-center gap-2">
+              <div className="flex items-center gap-1.5 bg-white/60 py-1.5 px-4 rounded-full border border-stone-200/40 shadow-sm">
+                <Heart className="w-3.5 h-3.5 fill-red-700 text-red-700 animate-pulse" />
+                <span className="font-sans font-semibold tracking-wide text-stone-500">
+                  Kota, Rajasthan 2026
+                </span>
               </div>
-              <p className="text-[9px] uppercase tracking-wider text-stone-400"></p>
             </div>
           </div>
         </footer>

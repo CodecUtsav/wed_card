@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 
 interface Petal {
   id: number;
@@ -16,9 +16,9 @@ export default function FallingPetals() {
     // Generate 16 random falling rose petals
     const newPetals: Petal[] = Array.from({ length: 16 }).map((_, index) => {
       const sizeRandom = Math.random();
-      let size = 'w-2 h-3.5';
-      if (sizeRandom > 0.6) size = 'w-3 h-4.5';
-      if (sizeRandom > 0.85) size = 'w-4 h-6';
+      let size = "w-2 h-3.5";
+      if (sizeRandom > 0.6) size = "w-3 h-4.5";
+      if (sizeRandom > 0.85) size = "w-4 h-6";
 
       return {
         id: index,
@@ -41,17 +41,28 @@ export default function FallingPetals() {
             className="absolute top-[-20px] rounded-full bg-red-600/70"
             style={{
               left: p.left,
-              animationName: 'petal-fall',
+              animationName: "petal-fall",
               animationDuration: p.duration,
               animationDelay: p.delay,
-              animationIterationCount: 'infinite',
-              animationTimingFunction: 'linear',
-              width: p.size.split(' ')[0] === 'w-2' ? '8px' : p.size.split(' ')[0] === 'w-3' ? '12px' : '16px',
-              height: p.size.split(' ')[1] === 'h-3.5' ? '14px' : p.size.split(' ')[1] === 'h-4.5' ? '18px' : '24px',
+              animationIterationCount: "infinite",
+              animationTimingFunction: "linear",
+              width:
+                p.size.split(" ")[0] === "w-2"
+                  ? "8px"
+                  : p.size.split(" ")[0] === "w-3"
+                    ? "12px"
+                    : "16px",
+              height:
+                p.size.split(" ")[1] === "h-3.5"
+                  ? "14px"
+                  : p.size.split(" ")[1] === "h-4.5"
+                    ? "18px"
+                    : "24px",
               opacity: p.opacity,
-              background: 'radial-gradient(circle, rgba(185,28,28,0.85) 0%, rgba(127,29,29,0.95) 100%)',
-              borderRadius: '50% 0 50% 50%',
-              transform: 'rotate(45deg)',
+              background:
+                "radial-gradient(circle, rgba(185,28,28,0.85) 0%, rgba(127,29,29,0.95) 100%)",
+              borderRadius: "50% 0 50% 50%",
+              transform: "rotate(45deg)",
             }}
           />
         );
