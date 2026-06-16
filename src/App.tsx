@@ -174,7 +174,7 @@ export default function App() {
             {/* Premium Photography Partner Promotion Block (With hover effect, without link) */}
             <div className="mt-12 pt-8 border-t border-dashed border-amber-300/40 max-w-sm mx-auto space-y-3">
               <span className="text-[9px] uppercase tracking-[0.25em] text-stone-400 font-bold block">
-                Official Media Partner
+                Moments Captured By
               </span>
 
               {/* Changed from <a> to <div> with cursor-pointer and group animations */}
