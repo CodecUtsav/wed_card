@@ -7,7 +7,7 @@ import PhotoGallery from "./components/PhotoGallery";
 import LoveStory from "./components/LoveStory";
 import MusicToggle from "./components/MusicToggle";
 import FallingPetals from "./components/FallingPetals";
-import { Calendar, MapPin, Sparkles, Heart } from "lucide-react";
+import { Calendar, MapPin, Sparkles, Heart, Camera, Phone } from "lucide-react";
 
 export default function App() {
   return (
@@ -134,7 +134,7 @@ export default function App() {
           <TimelineSection />
         </div>
 
-        {/* ================= IMPROVED FOOTER SECTION ================= */}
+        {/* ================= FOOTER SECTION ================= */}
         <footer className="relative py-20 px-4 bg-gradient-to-b from-transparent via-stone-50/50 to-amber-50/30 text-center select-none overflow-hidden border-t border-amber-200/30">
           {/* Refined Modular Hanging Festoon/Curtain Overlay */}
           <div className="absolute top-0 inset-x-0 h-6 flex justify-between pointer-events-none opacity-[0.15]">
@@ -171,8 +171,41 @@ export default function App() {
               </span>
             </div>
 
+            {/* Premium Photography Partner Promotion Block (With hover effect, without link) */}
+            <div className="mt-12 pt-8 border-t border-dashed border-amber-300/40 max-w-sm mx-auto space-y-3">
+              <span className="text-[9px] uppercase tracking-[0.25em] text-stone-400 font-bold block">
+                Official Media Partner
+              </span>
+
+              {/* Changed from <a> to <div> with cursor-pointer and group animations */}
+              <div className="flex flex-col items-center justify-center gap-1 group cursor-pointer">
+                <div className="flex items-center gap-2 text-amber-800 font-serif font-bold text-sm tracking-wide group-hover:text-amber-700 transition-colors duration-300">
+                  <Camera className="w-4 h-4 text-amber-600 group-hover:scale-110 transition-transform duration-300" />
+                  <span>Paliwal Photo Studio</span>
+                </div>
+                <span className="text-[11px] font-medium text-stone-500 group-hover:text-amber-600/80 transition-colors duration-300 flex items-center gap-1">
+                  <MapPin className="w-3 h-3 text-amber-500" /> SumerGanj Mandi
+                </span>
+              </div>
+
+              <div className="flex items-center justify-center gap-4 pt-1">
+                <a
+                  href="tel:+919413086688"
+                  className="flex items-center gap-1 text-[11px] font-mono font-medium text-stone-500 hover:text-red-700 transition-colors bg-white/50 px-2.5 py-1 rounded-full border border-stone-200/50 shadow-sm"
+                >
+                  <Phone className="w-3 h-3 text-red-600/80" /> 9413086688
+                </a>
+                <a
+                  href="tel:+919414539439"
+                  className="flex items-center gap-1 text-[11px] font-mono font-medium text-stone-500 hover:text-red-700 transition-colors bg-white/50 px-2.5 py-1 rounded-full border border-stone-200/50 shadow-sm"
+                >
+                  <Phone className="w-3 h-3 text-red-600/80" /> 9414539439
+                </a>
+              </div>
+            </div>
+
             {/* Institutional Metadata Signoff */}
-            <div className="pt-10 text-[10px] font-mono text-stone-400 flex flex-col items-center justify-center gap-2">
+            <div className="pt-6 text-[10px] font-mono text-stone-400 flex flex-col items-center justify-center gap-2">
               <div className="flex items-center gap-1.5 bg-white/60 py-1.5 px-4 rounded-full border border-stone-200/40 shadow-sm">
                 <Heart className="w-3.5 h-3.5 fill-red-700 text-red-700 animate-pulse" />
                 <span className="font-sans font-semibold tracking-wide text-stone-500">

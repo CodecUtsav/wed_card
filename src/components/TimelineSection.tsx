@@ -30,6 +30,7 @@ interface EventItem {
   badgeTheme: string; // tailwind badge style
   scheduleTime: string; // Google template format
   endTime: string;
+  mapsUrl?: string; // Optional Maps link
 }
 
 export default function TimelineSection() {
@@ -96,6 +97,7 @@ export default function TimelineSection() {
       badgeTheme: "bg-amber-100 text-amber-800",
       scheduleTime: "20260708T090000",
       endTime: "20260708T110000",
+      mapsUrl: "https://maps.app.goo.gl/nfyepxGBvPi7VQMM7?g_st=aw",
     },
     {
       id: "haldi",
@@ -117,6 +119,7 @@ export default function TimelineSection() {
       badgeTheme: "bg-yellow-100 text-amber-900",
       scheduleTime: "20260708T141500",
       endTime: "20260708T170000",
+      mapsUrl: "https://maps.app.goo.gl/nfyepxGBvPi7VQMM7?g_st=aw",
     },
     {
       id: "sangeet",
@@ -138,9 +141,10 @@ export default function TimelineSection() {
       badgeTheme: "bg-purple-100 text-purple-800",
       scheduleTime: "20260708T191500",
       endTime: "20260708T233000",
+      mapsUrl: "https://maps.app.goo.gl/nfyepxGBvPi7VQMM7?g_st=aw",
     },
     {
-      id: "engagement",
+      id: "indigo",
       title: "Engagement & Ring Ceremony",
       date: "Thursday, 9 July 2026",
       shortDate: "9 JULY",
@@ -159,6 +163,7 @@ export default function TimelineSection() {
       badgeTheme: "bg-indigo-100 text-indigo-800",
       scheduleTime: "20260709T091500",
       endTime: "20260709T104500",
+      mapsUrl: "https://maps.app.goo.gl/nfyepxGBvPi7VQMM7?g_st=aw",
     },
     {
       id: "barat",
@@ -180,6 +185,7 @@ export default function TimelineSection() {
       badgeTheme: "bg-orange-100 text-orange-800",
       scheduleTime: "20260709T110000",
       endTime: "20260709T130000",
+      mapsUrl: "https://maps.app.goo.gl/nfyepxGBvPi7VQMM7?g_st=aw",
     },
     {
       id: "phere",
@@ -201,6 +207,7 @@ export default function TimelineSection() {
       badgeTheme: "bg-red-600 text-white font-extrabold",
       scheduleTime: "20260709T130000",
       endTime: "20260709T163000",
+      mapsUrl: "https://maps.app.goo.gl/nfyepxGBvPi7VQMM7?g_st=aw",
     },
     {
       id: "procession",
@@ -222,6 +229,7 @@ export default function TimelineSection() {
       badgeTheme: "bg-amber-100 text-amber-900",
       scheduleTime: "20260709T181500",
       endTime: "20260709T190000",
+      mapsUrl: "https://maps.app.goo.gl/nfyepxGBvPi7VQMM7?g_st=aw",
     },
     {
       id: "reception",
@@ -243,6 +251,7 @@ export default function TimelineSection() {
       badgeTheme: "bg-emerald-100 text-emerald-800",
       scheduleTime: "20260709T190000",
       endTime: "20260709T233000",
+      mapsUrl: "https://maps.app.goo.gl/nfyepxGBvPi7VQMM7?g_st=aw",
     },
   ];
 
@@ -436,23 +445,44 @@ export default function TimelineSection() {
                         </p>
 
                         {/* Traditional Arch Frame Venue info */}
-                        <div className="bg-amber-50/40 p-4 rounded-xl border border-amber-500/15 flex items-start gap-3">
-                          <MapPin className="w-5 h-5 text-red-800 shrink-0 mt-0.5" />
-                          <div className="text-xs space-y-0.5 text-stone-850">
-                            <span className="font-extrabold tracking-wide block">
-                              {ev.venueName}
-                            </span>
-                            <span className="text-[11px] text-stone-500 mt-1 block leading-relaxed">
-                              {ev.venueAddress}
-                            </span>
-                          </div>
+                        <div className="bg-amber-50/40 p-4 rounded-xl border border-amber-500/15">
+                          {ev.mapsUrl ? (
+                            <a
+                              href={ev.mapsUrl}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="group flex items-start gap-3 text-left"
+                            >
+                              <MapPin className="w-5 h-5 text-red-800 shrink-0 mt-0.5 group-hover:scale-110 transition-transform duration-300" />
+                              <div className="text-xs space-y-0.5 text-stone-850">
+                                <span className="font-extrabold tracking-wide block text-amber-900 group-hover:text-red-800 transition-colors duration-300 underline decoration-amber-500/40 group-hover:decoration-red-600">
+                                  {ev.venueName}
+                                </span>
+                                <span className="text-[11px] text-stone-500 mt-1 block leading-relaxed">
+                                  {ev.venueAddress}
+                                </span>
+                              </div>
+                            </a>
+                          ) : (
+                            <div className="flex items-start gap-3 text-left">
+                              <MapPin className="w-5 h-5 text-red-800 shrink-0 mt-0.5" />
+                              <div className="text-xs space-y-0.5 text-stone-850">
+                                <span className="font-extrabold tracking-wide block">
+                                  {ev.venueName}
+                                </span>
+                                <span className="text-[11px] text-stone-500 mt-1 block leading-relaxed">
+                                  {ev.venueAddress}
+                                </span>
+                              </div>
+                            </div>
+                          )}
                         </div>
                       </div>
 
                       {/* Event bottom metadata or Action link */}
                       <div className="mt-6 pt-4 border-t border-stone-100 flex items-center justify-between">
                         <span className="text-[10px] font-bold text-stone-400 uppercase tracking-widest italic font-serif">
-                          Mayank &amp; Ritika
+                          Mayank & Ritika
                         </span>
 
                         <a
